@@ -29,12 +29,11 @@ H 水平	30%的字碼可被修正
 
 请求连接为：http://api.dxy.cn/qr-code/?url=http://app.dxy.cn/&size=10&margin=1&format=png
 
-QR码扫描的内为 「http://app.dxy.cn」（不包括引号）。
+QR码扫描的内为 「 http://app.dxy.cn 」（不包括引号）。
 
---
 
 ![QR码例子](http://api.dxy.cn/qr-code/?url=http://dxy.me/6RRZN3&size=5&margin=1&format=png&level=h)
 
 请求连接为： http://api.dxy.cn/qr-code/?url=http://dxy.me/6RRZN3&size=5&margin=1&format=png&level=h
 
-QR码扫描的内为 「http://dxy.me/6RRZN3」（不包括引号），级别为 H 水平。
+QR码扫描的内为 「 http://dxy.me/6RRZN3 」（不包括引号），级别为 H 水平。
