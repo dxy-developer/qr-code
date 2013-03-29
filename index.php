@@ -18,8 +18,17 @@ $ERRORS = array(
     )
 );
 
-$url = getRequestParam("url", null, "get");
-if (!isDXYUrl($url)) {
+
+// Thanks Sam :^)
+function getUrl() {
+    $url = getRequestParam("url", null, "get");
+    if(empty($url) && isset($_SERVER['HTTP_REFERER'])) {
+        $url = $_SERVER['HTTP_REFERER'];
+    }
+    return strip_tags($url);
+}
+
+if (!isDXYUrl($url = getUrl())) {
     raiseErros($ERRORS["NOT_DXY_URL"]["message"], $ERRORS["NOT_DXY_URL"]["id"]);
 }
 

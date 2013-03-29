@@ -8,7 +8,7 @@
 
 本脚本使用简单，提供对应的 URL 、以及响应的参数即可生成对应 URL ，参数说明如下：
 
-* url*  需要生成的对应丁香园链接
+* url  需要生成的对应丁香园链接，（如果不输入同时在丁香园网页中嵌入，则自动使用当前引用页面的地址）
 *  format 输出格式，默认 png（图片），还有 text 文字
 *  size QR 码的大小，以 27px 为单位的步进，默认值为5
 *  margin QR码内容距离边界的值，方便区分周边内容和QR码，默认值为1
@@ -21,8 +21,6 @@ Q 水平	25%的字碼可被修正
 H 水平	30%的字碼可被修正
 ```
 
-注：带*的选项为必填参数
-
 ## 例子
 
 ![QR码例子](http://api.dxy.cn/qr-code/?url=http://app.dxy.cn/&size=3&margin=1&format=png)
@@ -31,9 +29,16 @@ H 水平	30%的字碼可被修正
 
 QR码扫描的内为 「 http://app.dxy.cn 」（不包括引号）。
 
+--
 
 ![QR码例子](http://api.dxy.cn/qr-code/?url=http://dxy.me/6RRZN3&size=5&margin=1&format=png&level=h)
 
 请求连接为： http://api.dxy.cn/qr-code/?url=http://dxy.me/6RRZN3&size=5&margin=1&format=png&level=h
 
 QR码扫描的内为 「 http://dxy.me/6RRZN3 」（不包括引号），级别为 H 水平。
+
+--
+
+如果直接在 DXY 页面中引用，可以不带 URL 参数，那么这会直接使用当前引用页面的网址，例如：
+
+请求连接为： http://api.dxy.cn/qr-code/?size=5&margin=1&format=png&level=h
