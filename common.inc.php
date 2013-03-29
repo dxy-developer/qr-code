@@ -66,7 +66,7 @@ function isDXYUrl($url) {
         return false;
     }
 
-    $dxy_domains = "dxy.me|dxy.cn|dxy.com|pubmed.cn|pubmed.com|biomart.cn";
+    $dxy_domains = "dxy.me|dxy.cn|dxy.com|pubmed.cn|pubmed.com|biomart.cn|dxyer.cn";
     $preg_matchers = sprintf("/(%s)$/", str_replace(".", "\.", $dxy_domains));
 
     return preg_match($preg_matchers, $url_array['host']);
